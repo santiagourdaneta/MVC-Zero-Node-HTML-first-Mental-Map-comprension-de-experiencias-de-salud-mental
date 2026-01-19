@@ -1,0 +1,45 @@
+:focus-visible {
+  outline: 3px solid #ffd700;
+  outline-offset: 2px;
+}
+body {
+  background: #0b0b0b;
+  color: #f5f5f5;
+}
+.emotional-map {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.zone {
+  padding: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #1a1a1a;
+  color: #f5f5f5;
+}
+
+.zone:focus-visible {
+  outline: 3px solid #ffd700;
+}
+
+.zone.calm {
+  background: #1f3b4d;
+}
+.zone.overload {
+  background: #4d1f1f;
+}
+.zone.void {
+  background: #2b2b2b;
+}
+
+.state-panel {
+  min-height: 6rem;
+  padding: 1rem;
+  background: #121212;
+  border-left: 4px solid #ffd700;
+}

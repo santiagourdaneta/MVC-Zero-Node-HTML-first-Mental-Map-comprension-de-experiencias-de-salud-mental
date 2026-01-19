@@ -1,0 +1,12 @@
+# 1. Seguridad Extrema en Cabeceras
+Header set Content-Security-Policy "default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net;"
+Header set X-Content-Type-Options "nosniff"
+Header set X-Frame-Options "DENY"
+Header set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+Header set Referrer-Policy "no-referrer"
+
+# 2. Bloquear acceso a archivos sensibles
+<FilesMatch "(\.(bak|config|sql|php|log)|#)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
